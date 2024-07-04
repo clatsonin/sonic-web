@@ -1,12 +1,8 @@
-
 $(function() {
-
     "use strict";
 
     /***************************
-
     swup
-
     ***************************/
     const options = {
         containers: ['#swupMain', '#swupMenu'],
@@ -17,27 +13,20 @@ $(function() {
     const swup = new Swup(options);
 
     /***************************
-
     register gsap plugins
-
     ***************************/
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
     /***************************
-
     color variables
-
     ***************************/
-
     var accent = 'rgba(255, 152, 0, 1)';
     var dark = '#000';
     var light = '#fff';
 
     /***************************
-
     preloader
-    
     ***************************/
-
     var timeline = gsap.timeline();
 
     timeline.to(".mil-preloader-animation", {
@@ -52,7 +41,7 @@ $(function() {
             y: "0px",
             opacity: 1,
             stagger: 0.4
-        },
+        }
     );
 
     timeline.to(".mil-animation-1 .mil-h3", {
@@ -104,10 +93,9 @@ $(function() {
             $('.mil-preloader').addClass("mil-hidden");
         },
     }, "-=1");
+
     /***************************
-
     anchor scroll
-
     ***************************/
     $(document).on('click', 'a[href^="#"]', function(event) {
         event.preventDefault();
@@ -122,11 +110,12 @@ $(function() {
         $('html, body').animate({
             scrollTop: target.offset().top - offset
         }, 400);
-        // Handle external links to prevent redirection (example)
+    });
+
+    // Handle external links to prevent redirection (example)
     $(document).on('click', 'a[href^="https://drive.google.com/file/"]', function(event) {
         event.preventDefault();
         alert("Download link disabled for demonstration purposes.");
-
     });
     /***************************
 
