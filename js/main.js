@@ -99,7 +99,7 @@ $(function() {
     ***************************/
     $(document).on('click', 'a[href^="#"]', function(event) {
         event.preventDefault();
-
+        var target = $($.attr(this, 'href'));
         
         var offset = 0;
 
