@@ -122,6 +122,11 @@ $(function() {
         $('html, body').animate({
             scrollTop: target.offset().top - offset
         }, 400);
+        // Handle external links to prevent redirection (example)
+    $(document).on('click', 'a[href^="https://drive.google.com/file/"]', function(event) {
+        event.preventDefault();
+        alert("Download link disabled for demonstration purposes.");
+
     });
     /***************************
 
