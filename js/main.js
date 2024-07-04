@@ -109,23 +109,7 @@ $(function() {
     anchor scroll
 
     ***************************/
-    $(document).ready(function() {
-    $(document).on('click', 'a[href^="#"]', function(event) {
-        event.preventDefault();
-
-        var target = $($.attr(this, 'href'));
-        if (target.length) {
-            var offset = 0;
-
-            if ($(window).width() < 1200) {
-                offset = 90;
-            }
-
-            $('html, body').animate({
-                scrollTop: target.offset().top - offset
-            }, 400);
-        }
-    });
+    
 });
 
     /***************************
