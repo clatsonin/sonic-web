@@ -113,10 +113,7 @@ $(function() {
     });
 
     // Handle external links to prevent redirection (example)
-    $(document).on('click', 'a[href^="https://sonicstyle.vercel.app/file/"]', function(event) {
-    event.preventDefault();
-    alert("Download link disabled for demonstration purposes.");
-    });
+    
 
     /***************************
 
